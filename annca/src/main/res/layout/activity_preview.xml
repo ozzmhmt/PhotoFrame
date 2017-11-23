@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <io.github.memfis19.annca.internal.ui.view.AspectFrameLayout
+        android:id="@+id/previewAspectFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <SurfaceView
+            android:id="@+id/video_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </io.github.memfis19.annca.internal.ui.view.AspectFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/photo_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/preview_control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#82212121"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cancel_media_action"
+            style="@style/PreviewButtonsStyle"
+            android:drawableTop="@drawable/ic_clear_white_24dp"
+            android:text="@string/preview_controls_cancel" />
+
+        <TextView
+            android:id="@+id/crop_image"
+            style="@style/PreviewButtonsStyle"
+            android:drawableTop="@drawable/ic_crop_white_24dp"
+            android:text="@string/preview_controls_crop" />
+
+        <TextView
+            android:id="@+id/ratio_image"
+            style="@style/PreviewButtonsStyle"
+            android:drawableTop="@drawable/ic_image_aspect_ratio_white_24dp" />
+
+        <TextView
+            android:id="@+id/re_take_media"
+            style="@style/PreviewButtonsStyle"
+            android:drawableTop="@drawable/ic_replay_white_24dp"
+            android:text="@string/preview_controls_retake" />
+
+        <TextView
+            android:id="@+id/confirm_media_result"
+            style="@style/PreviewButtonsStyle"
+            android:drawableTop="@drawable/ic_done_white_24dp"
+            android:text="@string/preview_controls_confirm" />
+
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <ImageView
+        android:id="@+id/FrameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/frame_btn_focused"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:id="@+id/ShareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="61dp" />
+    <ImageView
+        android:id="@+id/ReplayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_replay_white_24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/FrameBtn" />
+
+</RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frameLy"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#80000000">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Çerceve Seç"
+            android:id="@+id/SelectFrameTv"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/TeamTv"
+            android:text="Takım" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/TeamRv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/StreamerTv"
+            android:text="Yayıncı" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/StreamerRv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/OtherTv"
+            android:text="Diğer" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/OtherRv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            />
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>
