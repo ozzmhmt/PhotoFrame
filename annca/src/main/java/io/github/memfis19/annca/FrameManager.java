@@ -1,4 +1,4 @@
-package digu.PhotoEdition;
+package io.github.memfis19.annca;
 
 import java.util.HashMap;
 
